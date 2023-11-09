@@ -4,12 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/src/style.css">
     <link href="/dist/output.css" rel="stylesheet">
 </head>
 <body>
-    <div class="bg-slate-800 flex justify-center items-center w-screen h-screen">
-        <h1 class=" font-bold text-white text-4xl">Hello world.</h1>
+    <!-- navbar -->
+    <nav class="fixed top-0 left-0 min-w-[4rem] space-y-3 w-1/12 p-2 h-screen bg-themeLightBlue transition-all ease-out hover:w-2/12">
+        <div>
+            <a href="#">
+                <div class="w-10 h-10 rounded-md relative bg-themeWhite">
+                    <div class="w-6 h-6 rounded-full absolute bg-themeDarkBlue top-1 right-2"></div>
+                    <div class="w-4 h-4 rounded-full absolute bg-themeRed top-5 right-2"></div>
+                </div>
+                <p class=" text-themeWhite text-[10%]">welcome</p>
+            </a>
+            <ul class="flex flex-col space-y-3">
+                <a href="#display">
+                    <li class="bg-themeWhite p-2 font-bold text-themeLightBlue rounded-sm transition-transform ease-out hover:translate-x-2 hover:text-themeRed">display</li>
+                </a>
+                <a href="#grid">
+                    <li class="bg-themeWhite p-2 font-bold text-themeLightBlue rounded-sm transition-transform ease-out hover:translate-x-2 hover:text-themeRed">grid</li>
+                </a>
+                <a href="#flex">
+                    <li class="bg-themeWhite p-2 font-bold text-themeLightBlue rounded-sm transition-transform ease-out hover:translate-x-2 hover:text-themeRed">flex</li>
+                </a>
+            </ul>
+        </div>
+        <div>
+            <ul class="flex flex-col space-y-3">
+                <a href="#ref">
+                    <li class="bg-themeWhite p-2 font-bold text-themeLightBlue rounded-sm transition-transform ease-out hover:translate-x-2 hover:text-themeRed">reference</li>
+                </a>
+                <a href="https://github.com/boomtnt2843/css-tailwind-prop-example">
+                    <li class="bg-themeWhite p-2 font-bold text-sm text-themeLightBlue rounded-sm transition-transform ease-out hover:translate-x-2 hover:text-themeRed">source code</li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- content container -->
+    <div class="flex flex-col min-h-screen ml-40 pr-4 bg-themeDarkBlue">
+        <!-- welcome section -->
+        <div class="flex flex-col justify-center items-center h-screen">
+            <h1 class="font-bold text-themeWhite text-4xl">Welcome to</h1>
+            <h1 class="font-bold text-themeWhite text-4xl">CSS DISPLAY & LAYOUT</h1>
+        </div>
+
+        <!-- display section -->
+        <section id="display" class="flex flex-col pt-5 h-screen space-y-4">
+            <h1 class="font-bold text-themeWhite text-4xl ">DISPLAY ▶︎</h1>
+            <h1 class="font-bold text-themeWhite text-3xl">The display property specifies if/how an element is displayed.</h1>
+            <div class="flex flex-col w-full flex-wrap space-y-4">
+                <div class="flex w-full bg-themeLightBlue rounded-md">
+                    <div class="flex-[2] text-themeWhite p-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.<p class="text-themeRed block font-bold my-1">HELLO WORLD</p> Autem quaerat unde quidem sapiente doloremque saepe, ipsum debitis magni consequatur natus placeat repudiandae? Iure voluptates necessitatibus at voluptatibus quo ipsam culpa et aut, sequi nesciunt quod sint voluptate eius, voluptatum vitae ducimus qui dolor modi rem illo recusandae porro. Quisquam a natus asperiores, itaque unde et facere perferendis rem reiciendis culpa!
+                    </div>
+                    <div class="flex flex-col items-center justify-center flex-1 bg-themeWhite m-2 rounded-sm p-1 text-themeDarkBlue">
+                        <div >"HELLO WORLD" it's display block<br/></div>
+                        <div class="font-bold">display:<p class="inline text-themeRed"> block</p></div>
+                    </div>
+                </div>
+                <div class="flex w-full bg-themeLightBlue rounded-md">
+                    <div class="flex-[2] text-themeWhite p-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.<p class="text-themeRed inline font-bold my-3">HELLO WORLD</p> Autem quaerat unde quidem sapiente doloremque saepe, ipsum debitis magni consequatur natus placeat repudiandae? Iure voluptates necessitatibus at voluptatibus quo ipsam culpa et aut, sequi nesciunt quod sint voluptate eius, voluptatum vitae ducimus qui dolor modi rem illo recusandae porro. Quisquam a natus asperiores, itaque unde et facere perferendis rem reiciendis culpa!
+                    </div>
+                    <div class="flex flex-col items-center justify-center flex-1 bg-themeWhite m-2 rounded-sm p-1 text-themeDarkBlue">
+                        <div >"HELLO WORLD" it's display inline<br/></div>
+                        <div class="font-bold">display:<p class="inline text-themeRed"> inline</p></div>
+                    </div>
+                </div>
+                <div class="flex w-full bg-themeLightBlue rounded-md">
+                    <div class="flex-[2] text-themeWhite p-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.<p class="text-themeRed inline-block font-bold my-3">HELLO WORLD</p> Autem quaerat unde quidem sapiente doloremque saepe, ipsum debitis magni consequatur natus placeat repudiandae? Iure voluptates necessitatibus at voluptatibus quo ipsam culpa et aut, sequi nesciunt quod sint voluptate eius, voluptatum vitae ducimus qui dolor modi rem illo recusandae porro. Quisquam a natus asperiores, itaque unde et facere perferendis rem reiciendis culpa!
+                    </div>
+                    <div class="flex flex-col items-center justify-center flex-1 bg-themeWhite m-2 rounded-sm p-1 text-themeDarkBlue">
+                        <div >"HELLO WORLD" it's display inline-block<br/></div>
+                        <div class="font-bold">display:<p class="inline text-themeRed"> inline-block</p></div>
+                    </div>
+                </div>
+                <div class="flex w-full bg-themeLightBlue rounded-md">
+                    <div class="flex-[2] text-themeWhite p-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.<p class="text-themeRed hidden font-bold my-3">HELLO WORLD</p> Autem quaerat unde quidem sapiente doloremque saepe, ipsum debitis magni consequatur natus placeat repudiandae? Iure voluptates necessitatibus at voluptatibus quo ipsam culpa et aut, sequi nesciunt quod sint voluptate eius, voluptatum vitae ducimus qui dolor modi rem illo recusandae porro. Quisquam a natus asperiores, itaque unde et facere perferendis rem reiciendis culpa!
+                    </div>
+                    <div class="flex flex-col items-center justify-center flex-1 bg-themeWhite m-2 rounded-sm p-1 text-themeDarkBlue">
+                        <div >"HELLO WORLD" it's display none<br/></div>
+                        <div class="font-bold">display:<p class="inline text-themeRed"> none</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class=" border-b-8 w-1/2 border-themeWhite mx-6"></div>
+            <div>
+                <h1 class="font-bold text-themeWhite text-4xl inline">
+                    display: none
+                </h1>
+                <h1 class="font-bold text-themeRed text-xl inline"> VS </h1>
+                <h1 class="font-bold text-themeWhite text-4xl inline">
+                    visibility: hidden
+                </h1>
+            </div>
+            <div class="flex space-x-2 flex-wrap">
+                <div class="flex flex-1 flex-col bg-themeLightBlue rounded-b-md p-2 text-themeWhite">
+                    <div class="font-bold w-full bg-themeWhite text-themeDarkBlue pl-2">display:<p class="inline text-themeRed"> none</p></div>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. <p class="text-themeRed hidden font-bold my-3">HELLO WORLD</p>Beatae neque voluptas sunt. Sequi officia libero a non pariatur dolores reprehenderit.
+                </div>
+                <div class="flex flex-1 flex-col bg-themeLightBlue rounded-b-md p-2 text-themeWhite">
+                    <div class="font-bold w-full bg-themeWhite text-themeDarkBlue pl-2">visibility:<p class="inline text-themeRed"> hidden</p></div>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. <p class="text-themeRed invisible font-bold my-3">HELLO WORLD</p>Beatae neque voluptas sunt. Sequi officia libero a non pariatur dolores reprehenderit.
+                </div>
+            </div>
+        </section>
     </div>
 </body>
 </html>
