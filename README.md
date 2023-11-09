@@ -14,7 +14,7 @@ just template css html
 
 ## runing
 - start tailwind
-```npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch```
+```npx tailwindcss -i ./input.css -o ./dist/output.css --watch```
 
 - right click editer code page in ./src/index.html > open with live server
 
